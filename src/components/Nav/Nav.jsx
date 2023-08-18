@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from './Nav.module.css'
+import logo from '../../assets/images/logo.svg'
+import ham from '../../assets/images/ham.svg'
 
 const Nav = () => {
   return (
     <div className={styles.nav}>
-      <img src="images/logo.svg" alt="logo" className={styles.logo}/>
+      <img src={logo} alt="logo" className={styles.logo}/>
       <ul className={styles.linksContainer}>
         <li>
           <NavLink to='/'>HOME</NavLink>
@@ -17,7 +19,7 @@ const Nav = () => {
           <NavLink to='/plan'>CREATE YOUR PLAN</NavLink>
         </li>
       </ul>
-      <img src="images/ham.svg" alt="ham"  className={styles.ham}/>
+      <img src={ham} alt="ham"  className={styles.ham}/>
     </div>
   );
 };

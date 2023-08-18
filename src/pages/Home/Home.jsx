@@ -32,7 +32,7 @@ const Home = ({ collections, reasons }) => {
 
           <div className={styles.collectionCard}>
             {collections.map((collection, index) => (
-              <>
+            
                 <Card
                   key={index}
                   position="top"
@@ -41,7 +41,7 @@ const Home = ({ collections, reasons }) => {
                 >
                   <img src={collection.src} alt="coffee" />
                 </Card>
-              </>
+            
             ))}
           </div>
         </section>
@@ -57,7 +57,7 @@ const Home = ({ collections, reasons }) => {
 
           <div className={styles.reasonCard}>
             {reasons.map((reason, index) => (
-              <>
+            
                 <Card
                 className={styles.contents}
                   key={index}
@@ -67,7 +67,7 @@ const Home = ({ collections, reasons }) => {
                 >
                   <img src={reason.src} alt="coffee" />
                 </Card>
-              </>
+             
             ))}
           </div>
         </section>
