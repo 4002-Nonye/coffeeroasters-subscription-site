@@ -1,0 +1,256 @@
+.heroImg {
+  position: relative;
+  background-image: url("/images/home-heroImg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+
+  width: 100%;
+}
+.content {
+  position: absolute;
+
+  color: white;
+  left: 17rem;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+.content h1 {
+  font-size: 57px;
+  color: var(--bg-color);
+  font-family: var(--ff-fraunces);
+  line-height: 48px;
+}
+.content p {
+  margin-top: 1.2rem;
+  width: 26rem;
+  font-family: var(--ff-barlow);
+  font-size: 19px;
+  line-height: 1.5rem;
+}
+.btn {
+  margin-top: 1.3rem;
+  background-color: var(--dark-cyan);
+  color: var(--bg-color);
+  padding: 1.2rem 3rem;
+  font-size: 18px;
+  border-radius: 0.5rem;
+  font-family: var(--ff-fraunces);
+}
+.btn a:link,
+.btn a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.collectionSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  font-family: var(--ff-fraunces);
+}
+.collection {
+  position: absolute;
+  z-index: -1;
+  font-size: 9.5rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--grey),
+    rgba(255, 255, 255, 0.5019607843)
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.collectionCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 1rem;
+  margin-top: 8rem;
+  align-items: center;
+  place-content: center;
+
+  width: 60%;
+  color: var(--dark-grey-blue);
+}
+
+.collectionCard h3 {
+  font-size: 1.5rem;
+
+  font-family: var(--ff--fraunces);
+  font-weight: 900;
+  padding: 2rem 0 2rem;
+}
+.collectionCard p {
+  font-family: var(--ff--barlow);
+  line-height: 1.5rem;
+}
+.reason {
+  background-color: var(--dark-grey-blue);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+  margin-top: 6rem;
+  font-family: var(--ff-barlow);
+  padding-bottom: 20rem;
+  position: relative;
+}
+.reason .head {
+  color: white;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: var(--ff-fraunces);
+  margin-top: 4rem;
+}
+.reason .subhead {
+  width: 36rem;
+  text-align: center;
+  color: var(--bg-light-cream);
+  opacity: 0.8;
+  font-size: 18px;
+  line-height: 26px;
+
+  margin-top: 2rem;
+}
+.reasonCard {
+  display: flex;
+  position: absolute;
+  top: 25rem;
+  gap: 1.5rem;
+  padding: 0px 1.5rem;
+}
+.reasonCard > div {
+  flex-direction: column;
+  text-align: center;
+  padding: 5.5rem 2.5rem 3rem;
+  display: flex;
+
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: var(--dark-cyan);
+  border-radius: 0.5rem;
+
+  margin: 0px auto;
+}
+
+.reasonCard h3 {
+  color: var(--bg-light-cream);
+  font-family: var(--ff-fraunces);
+  margin: 1.5rem 0;
+  font-size: 20px;
+}
+.reasonCard p {
+  color: var(--bg-light-cream);
+
+  font-size: 16px;
+  line-height: 26px;
+  width: 15rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .collectionCard {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+  .collectionCard p {
+    margin-bottom: 2rem;
+  }
+  .reasonCard {
+    flex-direction: column;
+    width: 100%;
+    top: 22rem;
+    align-items: center;
+  }
+  .reasonCard > div {
+    flex-direction: row;
+    text-align: left;
+    gap: 4rem;
+    padding: 2rem;
+    width: 80%;
+  }
+  .reasonCard h3 {
+    margin: 1rem 0;
+  }
+  .reasonCard p {
+    text-align: left;
+    width: 70%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .collection {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .heroImg {
+    height: 70vh;
+  }
+  .content {
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+  .content h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  .content p {
+    width: 17.5rem;
+    text-align: center;
+  }
+  .btn {
+    width: 100%;
+  }
+  .collection {
+    font-size: 4rem;
+  }
+  .collectionCard {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+.reason{
+  padding: 1rem;
+  padding-bottom: 40rem;
+}
+.reason .head{
+  font-size: 35px;
+  text-align: center;
+
+}
+.reason .subhead{
+  width: 100%;
+  font-size: 16px;
+}
+
+
+  .reasonCard > div {
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+  
+  }
+  .reasonCard h3 {
+    margin: 1rem 0;
+  }
+  .reasonCard p {
+    text-align: center;
+    width: 100%;
+  margin: unset;
+  }
+}
