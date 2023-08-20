@@ -1,14 +1,17 @@
-import { nanoid } from "nanoid";
-import PropTypes from "prop-types";
-import React from "react";
-import { Link } from "react-router-dom";
-import Box from "../../components/Box/Box";
-import Button from "../../components/Button/Button";
-import Card from "../../components/Card/Card";
-import Nav from "../../components/Nav/Nav";
-import styles from "./Home.module.css";
+import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Box from '../../components/Box/Box';
+import Button from '../../components/Button/Button';
+import Card from '../../components/Card/Card';
+import Nav from '../../components/Nav/Nav';
+import styles from './Home.module.css';
+import TimeLine from '../../components/TimeLine/TimeLine';
+import Footer from '../../components/Footer/Footer';
 
 function Home({ collections, reasons, works }) {
+  const navigate = useNavigate();
   return (
     <>
       <Nav />
@@ -21,8 +24,8 @@ function Home({ collections, reasons, works }) {
               expertly curated artisan coffees from our best roasters delivered
               directly to your door, at your schedule."
           >
-            <Button className={styles.btn}>
-              <Link to="plan">Create your plan</Link>
+            <Button className={styles.btn} onClick={() => navigate('/plan')}>
+              Create your plan
             </Button>
           </Box>
         </section>
@@ -46,7 +49,7 @@ function Home({ collections, reasons, works }) {
         </section>
 
         <section className={styles.reason}>
-          {" "}
+          {' '}
           <h3 className={styles.head}>Why choose us?</h3>
           <p className={styles.subhead}>
             A large part of our role is choosing which particular coffees will
@@ -70,21 +73,30 @@ function Home({ collections, reasons, works }) {
         </section>
 
         <section className={styles.works}>
-          <h3>How it works</h3>
-          <div>
+          <h3 className={styles.head}>How it works</h3>
+          <TimeLine />
+          <div className={styles.container}>
             {works.map((work, index) => (
               <Card
+                className={styles.content}
                 key={nanoid()}
                 position="top"
                 title={work.title}
                 content={work.content}
               >
-                <p>0{index + 1}</p>
+                <p className={styles.number}>
+                  0
+                  {index + 1}
+                </p>
               </Card>
             ))}
           </div>
+          <Button className={styles.worksBtn} onClick={() => navigate('/plan')}>
+            Create your plan
+          </Button>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

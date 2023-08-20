@@ -1,7 +1,7 @@
 .footer {
   margin-top: 7rem;
   background-color: var(--dark-grey-blue);
-  padding: 3rem 5rem;
+  padding: 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
 a:link,
 a:visited {
   text-decoration: none;
-  color: var(--grey);
+ 
   font-family: var(--ff-barlow);
   font-weight: 700;
 
@@ -23,9 +23,10 @@ a:visited {
 }
 .linkTextContainer {
   display: flex;
+  color: var(--grey);
 }
 .linkText {
-  color: var(--grey);
+  color: inherit;
   font-family: var(--ff-barlow);
   font-size: 16px;
   letter-spacing: 0.923px;

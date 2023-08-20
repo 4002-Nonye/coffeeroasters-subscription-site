@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { nanoid } from 'nanoid';
+
 import styles from './Footer.module.css';
 import Logo from '../Logo/Logo';
 import footerLogo from '../../assets/images/logo-white.svg';
@@ -21,6 +22,13 @@ const socialLinks = [
 ];
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.right}>
@@ -28,7 +36,12 @@ function Footer() {
 
         <div className={styles.linkTextContainer}>
           {links.map((link) => (
-            <Link to={link.to} key={nanoid()} className={styles.linkText}>
+            <Link
+              to={link.to}
+              onClick={scrollToTop}
+              key={nanoid()}
+              className={styles.linkText}
+            >
               {link.text}
             </Link>
           ))}

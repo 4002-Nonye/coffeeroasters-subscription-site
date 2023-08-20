@@ -28,5 +28,5 @@ Card.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
   content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
-  className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  className: PropTypes.oneOfType([PropTypes.array, PropTypes.string, PropTypes.object]),
 };
