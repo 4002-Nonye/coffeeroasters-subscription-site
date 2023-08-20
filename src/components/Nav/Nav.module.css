@@ -37,9 +37,7 @@
 
 @media screen and (max-width: 768px) {
  
-  .logo{
-    width: 14rem;
-  }
+
   .linksContainer li a{
     font-size: 15px;
   }

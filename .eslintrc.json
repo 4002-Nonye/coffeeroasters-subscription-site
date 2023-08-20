@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "plugins": ["react", "simple-import-sort"],
+  "extends": "airbnb",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-console": "warn",
+    "object-shorthand": "off",
+    "no-unused-vars": "warn",
+    "linebreak-style": ["warn", "windows"]
+  }
+}

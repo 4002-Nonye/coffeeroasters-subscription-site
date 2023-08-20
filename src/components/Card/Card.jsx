@@ -1,28 +1,32 @@
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Card = ({ title, content, className, children, position = "top" }) => {
+function Card({
+  title, content, className, children,
+}) {
   return (
     <div>
-      {position === "top" ? (
-        <>
-          {children}
-          <div className={className}>
-            <h3>{title}</h3>
-            <p>{content}</p>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className={className}>
-            <h3>{title}</h3>
-            <p>{content}</p>
-          </div>
-
-          {children}
-        </>
-      )}
+      {children}
+      <div className={className}>
+        <h3>{title}</h3>
+        <p>{content}</p>
+      </div>
     </div>
   );
-};
+}
 
 export default Card;
+
+Card.defaultProps = {
+  title: '',
+  content: '',
+  className: '',
+  children: [],
+};
+
+Card.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+  content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  className: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+};

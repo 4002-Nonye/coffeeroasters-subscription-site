@@ -10,28 +10,6 @@
 
   width: 100%;
 }
-.content {
-  position: absolute;
-
-  color: white;
-  left: 17rem;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-}
-.content h1 {
-  font-size: 57px;
-  color: var(--bg-color);
-  font-family: var(--ff-fraunces);
-  line-height: 48px;
-}
-.content p {
-  margin-top: 1.2rem;
-  width: 26rem;
-  font-family: var(--ff-barlow);
-  font-size: 19px;
-  line-height: 1.5rem;
-}
 .btn {
   margin-top: 1.3rem;
   background-color: var(--dark-cyan);
@@ -68,16 +46,35 @@
   background-clip: text;
 }
 .collectionCard {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+
   text-align: center;
-  gap: 1rem;
   margin-top: 8rem;
   align-items: center;
-  place-content: center;
+  justify-content: center;
+  column-gap: 2rem;
+  width: 90%;
 
-  width: 60%;
   color: var(--dark-grey-blue);
+}
+.imgHolder {
+  position: relative;
+  height: 10rem;
+}
+.imgHolder img {
+  max-width: 100%;
+  height: auto;
+}
+.collectionCard > div {
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0px auto;
 }
 
 .collectionCard h3 {
@@ -104,6 +101,7 @@
   padding-bottom: 20rem;
   position: relative;
 }
+
 .reason .head {
   color: white;
   font-weight: 700;
@@ -159,9 +157,13 @@
   margin-top: 2rem;
   text-align: center;
 }
+.works {
+  margin-top: 20rem;
+}
 
 @media screen and (max-width: 1024px) {
   .collectionCard {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 80%;
   }
@@ -200,22 +202,10 @@
   .heroImg {
     height: 70vh;
   }
-  .content {
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-  }
-  .content h1 {
-    text-align: center;
-    font-size: 2.5rem;
-  }
-  .content p {
-    width: 17.5rem;
-    text-align: center;
-  }
   .btn {
     width: 100%;
+  
+    padding: 1rem;
   }
   .collection {
     font-size: 4rem;
@@ -224,26 +214,23 @@
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
   }
-.reason{
-  padding: 1rem;
-  padding-bottom: 40rem;
-}
-.reason .head{
-  font-size: 35px;
-  text-align: center;
-
-}
-.reason .subhead{
-  width: 100%;
-  font-size: 16px;
-}
-
+  .reason {
+    padding: 1rem;
+    padding-bottom: 40rem;
+  }
+  .reason .head {
+    font-size: 35px;
+    text-align: center;
+  }
+  .reason .subhead {
+    width: 100%;
+    font-size: 16px;
+  }
 
   .reasonCard > div {
     flex-direction: column;
     text-align: center;
     width: 70%;
-  
   }
   .reasonCard h3 {
     margin: 1rem 0;
@@ -251,6 +238,6 @@
   .reasonCard p {
     text-align: center;
     width: 100%;
-  margin: unset;
+    margin: unset;
   }
 }

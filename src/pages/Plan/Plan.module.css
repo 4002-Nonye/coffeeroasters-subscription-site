@@ -1,0 +1,18 @@
+.heroImg {
+    position: relative;
+    background-image: url("../../assets/images/plan-heroImg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  
+    width: 100%;
+  }
+  
+@media screen and (max-width: 500px) {
+    .heroImg {
+      height: 70vh;
+    }
+}  

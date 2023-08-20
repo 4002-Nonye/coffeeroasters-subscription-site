@@ -1,27 +1,28 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import styles from './Nav.module.css'
-import logo from '../../assets/images/logo.svg'
-import ham from '../../assets/images/ham.svg'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from './Nav.module.css';
+import Logo from '../Logo/Logo';
+import ham from '../../assets/images/ham.svg';
+import coffeeLogo from '../../assets/images/logo.svg';
 
-const Nav = () => {
+function Nav() {
   return (
     <div className={styles.nav}>
-      <img src={logo} alt="logo" className={styles.logo}/>
+      <Logo src={coffeeLogo} />
       <ul className={styles.linksContainer}>
         <li>
-          <NavLink to='/'>HOME</NavLink>
+          <NavLink to="/">HOME</NavLink>
         </li>
         <li>
-          <NavLink to='/about'>ABOUT US</NavLink>
+          <NavLink to="/about">ABOUT US</NavLink>
         </li>
         <li>
-          <NavLink to='/plan'>CREATE YOUR PLAN</NavLink>
+          <NavLink to="/plan">CREATE YOUR PLAN</NavLink>
         </li>
       </ul>
-      <img src={ham} alt="ham"  className={styles.ham}/>
+      <img src={ham} alt="ham" className={styles.ham} />
     </div>
   );
-};
+}
 
 export default Nav;

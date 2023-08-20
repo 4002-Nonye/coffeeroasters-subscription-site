@@ -1,0 +1,44 @@
+.content {
+  position: absolute;
+
+  color: white;
+  left: 20rem;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+.content h1 {
+  width: 30rem;
+
+  font-size: 65px;
+  color: var(--bg-color);
+  font-family: var(--ff-fraunces);
+  line-height: 48px;
+  margin-bottom: 2rem;
+}
+.content p {
+  margin-top: 1.2rem;
+  width: 26rem;
+  font-family: var(--ff-barlow);
+  font-size: 19px;
+  opacity: 0.8;
+
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .content {
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+  .content h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    width: 100%;
+  }
+  .content p {
+    width: 17.5rem;
+    text-align: center;
+  }
+}
