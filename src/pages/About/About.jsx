@@ -8,6 +8,8 @@ import Card from '../../components/Card/Card';
 import Nav from '../../components/Nav/Nav';
 import styles from './About.module.css';
 import Box from '../../components/Box/Box';
+import Layout from '../../components/Layout/Layout';
+import Address from '../../components/Address/Address';
 
 function About({ locations }) {
   return (
@@ -15,7 +17,7 @@ function About({ locations }) {
       <Nav />
       <main>
         {' '}
-        <section className={styles.heroImg}>
+        <Layout className={styles.heroImg}>
           <Box
             head="About Us"
             content=" Coffeeroasters began its journey of exotic discovery in 1999,
@@ -23,8 +25,8 @@ function About({ locations }) {
               since been dedicated to bring the perfect cup - from bean to brew
               - in every shipment."
           />
-        </section>
-        <section className={styles.commit}>
+        </Layout>
+        <Layout className={styles.commit}>
           <div>
             <img src={man} alt="man" className={styles.manJpg} />
           </div>
@@ -45,8 +47,8 @@ function About({ locations }) {
               growing region.
             </p>
           </div>
-        </section>
-        <section className={styles.quality}>
+        </Layout>
+        <Layout className={styles.quality}>
           <div className={styles.qualityContent}>
             <h3>Uncompromising quality</h3>
             <p>
@@ -63,8 +65,8 @@ function About({ locations }) {
           <div>
             <img src={coffee} alt="coffee" className={styles.coffeeJpg} />
           </div>
-        </section>
-        <section className={styles.headquarter}>
+        </Layout>
+        <Layout className={styles.headquarter}>
           <div className={styles.headquarterContent}>
             <h3 className={styles.head}>Our headquarters</h3>
 
@@ -75,18 +77,14 @@ function About({ locations }) {
                   key={nanoid()}
                   position="top"
                   title={location.title}
-                  content={location.content.map((c) => (
-                    <span className={styles.address} key={nanoid()}>
-                      {c}
-                    </span>
-                  ))}
+                  content={<Address address={location.content} />}
                 >
                   <img src={location.src} alt="coffee" />
                 </Card>
               ))}
             </div>
           </div>
-        </section>
+        </Layout>
       </main>
       <Footer />
     </>

@@ -1,3 +1,4 @@
+
 .content {
   position: absolute;
 
@@ -22,10 +23,11 @@
   font-family: var(--ff-barlow);
   font-size: 19px;
   opacity: 0.8;
-
+margin-bottom: 2rem;
   line-height: 1.5rem;
 }
 @media screen and (max-width: 500px) {
+ 
   .content {
     display: flex;
     left: 50%;
@@ -44,3 +46,4 @@
     text-align: center;
   }
 }
+

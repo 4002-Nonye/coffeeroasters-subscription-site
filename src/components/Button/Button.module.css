@@ -3,5 +3,10 @@
   outline: none;
   border: none;
   background-color: var(--dark-cyan);
+  transition: 0.5s;
   
+}
+
+.default:hover{
+  background-color: var(--light-cyan);
 }

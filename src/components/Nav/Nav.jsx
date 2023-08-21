@@ -11,13 +11,13 @@ function Nav() {
       <Logo src={coffeeLogo} />
       <ul className={styles.linksContainer}>
         <li>
-          <NavLink to="/" id="home">HOME</NavLink>
+          <NavLink to="/">HOME</NavLink>
         </li>
         <li>
-          <NavLink to="/about" id="about">ABOUT US</NavLink>
+          <NavLink to="/about">ABOUT US</NavLink>
         </li>
         <li>
-          <NavLink to="/plan" id="plan">CREATE YOUR PLAN</NavLink>
+          <NavLink to="/plan">CREATE YOUR PLAN</NavLink>
         </li>
       </ul>
       <img src={ham} alt="ham" className={styles.ham} />

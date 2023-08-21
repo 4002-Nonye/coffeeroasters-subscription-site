@@ -13,6 +13,7 @@ import uk from './assets/images/UK.svg';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
 import Plan from './pages/Plan/Plan';
+import ScrollToTop from './utils/ScrollToTop';
 
 const collections = [
   {
@@ -107,18 +108,22 @@ const locations = [
 
 function App() {
   return (
+
     <BrowserRouter>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home collections={collections} reasons={reasons} works={works} />
+      <ScrollToTop>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home collections={collections} reasons={reasons} works={works} />
           }
-        />
-        <Route path="about" element={<About locations={locations} />} />
-        <Route path="plan" element={<Plan />} />
-      </Routes>
+          />
+          <Route path="about" element={<About locations={locations} />} />
+          <Route path="plan" element={<Plan works={works} />} />
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
+
   );
 }
 

@@ -12,18 +12,11 @@
   gap: 5rem;
 }
 
-a:link,
-a:visited {
-  text-decoration: none;
- 
-  font-family: var(--ff-barlow);
-  font-weight: 700;
 
-  text-transform: uppercase;
-}
 .linkTextContainer {
   display: flex;
   color: var(--grey);
+
 }
 .linkText {
   color: inherit;
@@ -31,7 +24,7 @@ a:visited {
   font-size: 16px;
   letter-spacing: 0.923px;
   text-transform: uppercase;
-  margin-right: 0.8rem;
+  margin-right: 0.8rem;font-weight: 700;
 }
 
 .socials {

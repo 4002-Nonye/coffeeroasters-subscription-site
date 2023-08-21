@@ -27,6 +27,6 @@ Card.defaultProps = {
 Card.propTypes = {
   children: PropTypes.node,
   title: PropTypes.string,
-  content: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  content: PropTypes.oneOfType([PropTypes.array, PropTypes.string, PropTypes.object]),
   className: PropTypes.oneOfType([PropTypes.array, PropTypes.string, PropTypes.object]),
 };

@@ -1,0 +1,11 @@
+.accordion{
+    width: 65%;
+}
+.question{
+    color: var(--grey);
+font-family: var(--ff-fraunces);
+padding: 2rem 0;
+font-size: 40px;
+font-weight: 900;
+line-height: 48px;
+}

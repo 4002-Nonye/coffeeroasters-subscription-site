@@ -23,7 +23,7 @@
 .line {
     flex-grow: 1;
     height: 2px;
-    background-color:var(--pale-orange);
+        background-color:var(--pale-orange);
 }
 @media screen and (max-width: 1024px) {
     .timeline{

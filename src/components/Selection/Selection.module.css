@@ -1,0 +1,25 @@
+.optionsTab{
+    font-family: var(--ff-fraunces);
+    font-size: 24px;
+    font-weight: 900;
+   
+    
+    
+    
+    
+}
+.optionText{
+    columns: var(--dark-grey-blue);
+    border-bottom: 1px solid var(--grey);
+    padding: 2rem 0;
+    cursor: pointer;
+  
+}
+.span{
+    color: var(--dark-cyan);
+    margin-right: 2rem;
+ 
+}
+.disabled{
+    color: var(--grey);
+}

@@ -95,13 +95,7 @@
   font-weight: 900;
   line-height: 36px; 
 }
-.address {
-  display: inherit;
-  font-family: var(--ff-barlow);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-}
+
 @media screen and (max-width: 1024px) {
   .commit {
     width: 100%;

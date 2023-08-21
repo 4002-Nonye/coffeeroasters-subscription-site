@@ -3,12 +3,13 @@
 :root {
   /* Colors */
   --dark-cyan: hsl(179, 81%, 29%);
- --dark-grey-blue : hsl(215, 19%, 25%);
+  --light-cyan: hsl(178, 55%, 61%);
+  --dark-grey-blue: hsl(215, 19%, 25%);
   --pale-orange: hsl(25, 94%, 86%);
-  --bg-light-cream: hsl(43, 78%, 98%);
+  --bg-light-cream: hsl(45, 80%, 98%);
   --grey: hsl(215, 5%, 54%);
 
-  --bg-color: hsl(43, 78%, 98%);
+  --bg-color: hsl(45, 80%, 98%);
 
   /* font-family */
   --ff-barlow: "Barlow", sans-serif;
@@ -23,19 +24,19 @@
 }
 
 body {
-  /* font-family: var(--ff-barlow); */
   background-color: var(--bg-color);
   padding: 2rem 4rem 0 4rem;
   display: flex;
   flex-direction: column;
-  
-
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media screen and (max-width:768px){
-  body{
-     
-   padding: 2rem;
+@media screen and (max-width: 768px) {
+  body {
+    padding: 2rem;
   }
-  
 }
