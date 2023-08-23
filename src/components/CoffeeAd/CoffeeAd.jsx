@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { nanoid } from 'nanoid';
 import styles from './CoffeeAd.module.css';
 import TimeLine from '../TimeLine/TimeLine';
 import Card from '../Card/Card';
@@ -14,7 +13,7 @@ function CoffeeAd({ works }) {
         {works.map((work, index) => (
           <Card
             className={styles.content}
-            key={nanoid()}
+            key={work.title}
             title={work.title}
             content={work.content}
           >

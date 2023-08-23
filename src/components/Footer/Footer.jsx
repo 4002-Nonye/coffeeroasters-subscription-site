@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { nanoid } from 'nanoid';
 
 import styles from './Footer.module.css';
 import Logo from '../Logo/Logo';
@@ -31,7 +30,7 @@ function Footer() {
           {links.map((link) => (
             <Link
               to={link.to}
-              key={nanoid()}
+              key={link.to}
               className={styles.linkText}
             >
               {link.text}
@@ -42,7 +41,7 @@ function Footer() {
 
       <div className={styles.socials}>
         {socialLinks.map((socialLink) => (
-          <Link to={socialLink.href} target="blank" key={nanoid()}>
+          <Link to={socialLink.href} target="blank" key={socialLink.iconSrc}>
             <img src={socialLink.iconSrc} alt="Icon" />
           </Link>
         ))}

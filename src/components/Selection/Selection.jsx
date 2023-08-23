@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { nanoid } from 'nanoid';
 import styles from './Selection.module.css';
 
 const options = [
@@ -9,32 +11,44 @@ const options = [
   'Deliveries',
 ];
 
-function Selection() {
-  const [isActive, setIsActive] = useState(null);
-
-  const handleIsActive = (index) => {
-    setIsActive(index);
+function Selection({ curOpen, setIsCurOpen }) {
+  const handleOpen = (index) => {
+    setIsCurOpen(index !== curOpen ? index : null);
   };
-
   return (
     <div className={styles.optionsTab}>
       {options.map((option, index) => (
-
         <p
-          className={`${styles.optionText}  ${isActive !== index ? styles.disabled : ''}`}
-          onClick={() => handleIsActive(index)}
+          key={nanoid()}
+          className={`${styles.optionText} 
+          
+           ${curOpen !== index ? styles.disabled : styles.active} `}
+          onClick={() => handleOpen(index)}
           aria-hidden="true"
         >
-          <span className={`${styles.span}  ${isActive !== index ? styles.disabled : ''}`}>
+          <span
+            className={`${styles.span}  ${
+              curOpen !== index ? styles.disabled : ''
+            }`}
+          >
             0
             {index + 1}
           </span>
           {option}
         </p>
-
       ))}
     </div>
   );
 }
 
 export default Selection;
+
+Selection.propTypes = {
+  curOpen: PropTypes.number,
+  setIsCurOpen: PropTypes.func,
+};
+
+Selection.defaultProps = {
+  curOpen: Number,
+  setIsCurOpen: () => {},
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Nav from '../../components/Nav/Nav';
 import styles from './Plan.module.css';
@@ -9,8 +9,15 @@ import Selection from '../../components/Selection/Selection';
 import Footer from '../../components/Footer/Footer';
 import Accordion from '../../components/Accordion/Accordion';
 import faqs from '../../data/data';
+import OrderSummary from '../../components/OrderSummary/OrderSummary';
 
 function Plan({ works }) {
+  const [curOpen, setIsCurOpen] = useState(0);
+  const [coffeeTaste, setCoffeeTaste] = useState('______');
+  const [coffeeType, setCoffeeType] = useState('______');
+  const [coffeeQuantity, setcoffeeQuantity] = useState('______');
+  const [coffeeGround, setCoffeeGround] = useState('______');
+  const [coffeeDelivery, setCoffeeDelivery] = useState('______');
   return (
     <>
       <Nav />
@@ -27,9 +34,31 @@ function Plan({ works }) {
           <CoffeeAd works={works} />
         </Layout>
         <Layout className={styles.planOptions}>
-          <Selection />
-          <Accordion faqs={faqs} />
+          <Selection curOpen={curOpen} setIsCurOpen={setIsCurOpen} />
+          <div className={styles.orderSummaryWrapper}>
+            {' '}
+            <Accordion
+              faqs={faqs}
+              curOpen={curOpen}
+              setIsCurOpen={setIsCurOpen}
+              setCoffeeTaste={setCoffeeTaste}
+              setCoffeeType={setCoffeeType}
+              setcoffeeQuantity={setcoffeeQuantity}
+              setCoffeeGround={setCoffeeGround}
+              setCoffeeDelivery={setCoffeeDelivery}
+            />
+            <OrderSummary
+              coffeeTaste={coffeeTaste}
+              coffeeType={coffeeType}
+              coffeeQuantity={coffeeQuantity}
+              coffeeGround={coffeeGround}
+              coffeeDelivery={coffeeDelivery}
+            />
+
+          </div>
+
         </Layout>
+
       </main>
       <Footer />
     </>

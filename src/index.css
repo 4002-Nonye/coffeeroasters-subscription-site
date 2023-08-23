@@ -9,7 +9,7 @@
   --bg-light-cream: hsl(45, 80%, 98%);
   --grey: hsl(215, 5%, 54%);
 
-  --bg-color: hsl(45, 80%, 98%);
+ 
 
   /* font-family */
   --ff-barlow: "Barlow", sans-serif;
@@ -24,10 +24,12 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var( --bg-light-cream);
   padding: 2rem 4rem 0 4rem;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: auto;
 }
 a:link,
 a:visited {

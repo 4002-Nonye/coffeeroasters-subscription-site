@@ -2,18 +2,26 @@
     font-family: var(--ff-fraunces);
     font-size: 24px;
     font-weight: 900;
-   
+    width: 20%;
+
     
     
     
     
 }
 .optionText{
-    columns: var(--dark-grey-blue);
+    columns: var(--grey);
     border-bottom: 1px solid var(--grey);
     padding: 2rem 0;
     cursor: pointer;
+    opacity: .8;
+    text-transform: capitalize;
   
+}
+.optionText:hover{
+    color: hsl(215, 5%, 40%);
+    
+
 }
 .span{
     color: var(--dark-cyan);
@@ -22,4 +30,29 @@
 }
 .disabled{
     color: var(--grey);
+}
+
+@media screen and (max-width: 1024px){
+    .active{
+      color: var(--dark-cyan);
+    }
+    .optionsTab{
+    display: flex;
+    width: 100%;
+   
+   gap: 1rem;
+    }
+    .optionText{
+     border-bottom: 0;
+     font-size: 26px;
+    }
+    .span{
+        display: none;
+    }
+}  
+@media screen and (max-width:768px) {
+    .optionsTab{
+    display: none;
+  }
+    
 }

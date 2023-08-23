@@ -1,6 +1,8 @@
 .tabContainer{
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
+    width: 100%;
+  
     color:var( --dark-grey-blue);
   
 
@@ -10,15 +12,17 @@
     border-radius: 8px;
     padding: 2rem;
     height: 250px;
-    width: 228px;
+    width: calc(100% - 3rem);
+    
     display: flex;
     flex-direction: column;
     cursor: pointer;
     justify-content: center;
    transition: 0.3s;
+
     
 }
-.holder:hover{
+.hovered:hover{
     background-color: var(--pale-orange);
 }
 .tabContainer h3{
@@ -41,4 +45,23 @@ line-height: 26px;
 .selected{
     background-color: var(--dark-cyan);
     color: var( --bg-light-cream);
+}
+
+@media screen and (max-width:768px) {
+    .tabContainer{
+        flex-direction: column;
+        width: 100%;
+    }
+    .holder{
+        /* width: 100%; */
+        margin: auto;
+        height: 180px;
+    }
+}
+@media screen and (max-width:500px) {
+  
+    .holder{
+        width: unset;
+      
+    }
 }

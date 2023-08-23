@@ -20,12 +20,35 @@
 .planOptions {
   display: flex;
   margin-top: 6rem;
+  gap: 4rem;
   align-items: flex-start;
-  justify-content: space-between;
-  width: 75%;
+  width: 100%;
+ 
+}
+.orderSummaryWrapper{
+  width: 80%;
+}
+
+@media screen and (max-width: 1024px){
+  .planOptions{
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+}
+@media screen and (max-width: 768px){
+  .orderSummaryWrapper{
+    width: 100%;
+    margin: auto;
+  }
+
 }
 @media screen and (max-width: 500px) {
   .heroImg {
     height: 70vh;
+  }
+  .orderSummaryWrapper{
+    width: 100%;
   }
 }
